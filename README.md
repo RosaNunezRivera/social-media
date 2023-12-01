@@ -1,3 +1,3 @@
 ## Demo
 
-Click [here](https://rosanunezrivera.github.io/facebook/) to test the application
+Click [here](https://rosanunezrivera.github.io/socia-media/) to test the application
