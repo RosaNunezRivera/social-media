@@ -1,0 +1,366 @@
+@import "./reset.css";
+
+:root {
+   /*Global variables*/
+   --app-dark-bg: #282828;
+   --app-lessdark-bg: #3f3f3f;
+   --app-morelessdark-bg: #989696;
+   --app-blue: #1877f2;
+   --app-ligh-text: #f0ffff;
+   --app-primarybotton-color: #f27c1c;
+   --app-primarybotton-hover-color: #a95816;
+}
+
+body {
+   background-color: var(--app-dark-bg);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*                    Containers                         */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.container {
+   margin-top: 150px;
+   /*outline: 2px dashed rgb(50, 205, 33);*/
+   width: min(100% - 30px, 1080px);
+   margin-inline: auto;
+}
+
+.flex {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*                    Header                             */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.modal {
+   display: none;
+}
+
+.fixed-header {
+   position: fixed;
+   top: 0%;
+   left: 0%;
+   width: 100%;
+   height: 75px;
+   background-color: var(--app-lessdark-bg);
+   padding: 10px;
+   color: var(--app-ligh-text);
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.div-logo {
+   flex: 1;
+}
+
+.div-profile-image {
+   flex: 1;
+}
+
+.div-menu-options {
+   text-align: center;
+   flex: 2;
+}
+
+/*-------------------------------------------------------------*/
+/*                    Stylo to Logo                            */
+/*-------------------------------------------------------------*/
+h2 {
+   font-size: 30px;
+   color: var(--app-blue);
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.div-logo h2 .logotype {
+   text-align: center;
+}
+
+h2 a:hover {
+   color: var(--app-primarybotton-color);
+   transition: color 0.5s;
+}
+
+/*-------------------------------------------------------------*/
+/*                    Style to Nav Options                     */
+/*-------------------------------------------------------------*/
+.div-menu-options li a {
+   color: var(--app-blue);
+   font-size: 24px;
+   margin-left: 25px;
+   list-style: none;
+   text-decoration: none;
+}
+
+nav ul {
+   list-style: none;
+   display: flex;
+}
+
+li a:hover {
+   color: var(--app-primarybotton-color);
+   transition: color 0.5s;
+}
+
+/*-------------------------------------------------------------*/
+/*                    Style to Img profile                     */
+/*-------------------------------------------------------------*/
+.div-profile-image {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+.div-profile-image img {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*                   New Post                            */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.post-form {
+   background-color: var(--app-lessdark-bg);
+   border: 1px solid var(--app-lessdark-bg);
+   padding: 16px;
+   border-radius: 5px;
+   width: 80%;
+   margin: 16px auto;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.div-post-textarea {
+   display: flex;
+   flex-direction: row;
+
+}
+
+.div-post-footer {
+   display: flex;
+   flex-direction: row;
+}
+
+.div-upload-file {
+   flex: .5;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: left;
+   justify-content: center;
+}
+
+.div-name-file {
+   flex: 3;
+   text-align: left;
+   align-items: left;
+   justify-content: center;
+}
+
+p {
+   line-height: 40px;
+   color: var(--app-ligh-text);
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+}
+
+.div-post-button {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: right;
+   justify-content: right;
+   padding: 5px;
+}
+
+textarea {
+   width: 100%;
+   height: 175px;
+   resize: none;
+   color: var(--app-ligh-text);
+   border: 1px solid var(--app-border-gray);
+   font-size: 20px;
+   border-radius: 6px;
+   background-color: transparent;
+   overflow: hidden;
+}
+
+textarea::placeholder {
+   color: var(--app-ligh-text);
+}
+
+.div-upload-file input {
+   display: none;
+}
+
+.upload-file-label {
+   display: inline-block;
+   width: 100px;
+   height: 40px;
+   cursor: pointer;
+   background-color: var(--highlight);
+   color: var(--app-blue);
+   border-radius: 5px;
+}
+
+.upload-file-label:hover {
+   color: var(--app-primarybotton-color);
+   transition: all 0.25s ease-in-out;
+}
+
+input[type="button"] {
+   width: 100px;
+   height: 40px;
+   text-align: center;
+   background-color: var(--app-blue);
+   border-radius: 6px;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+   font-size: 20px;
+   font-weight: 600;
+   letter-spacing: 0.2px;
+   transition: all 0.25s ease-in-out;
+   color: var(--app-ligh-text);
+   cursor: pointer;
+}
+
+input[type="button"]:hover {
+   background-color: var(--app-primarybotton-color);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*                  Already Posted                       */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.posts-container {
+   width: 100%;
+   height: max-content;
+}
+
+.post {
+   background-color: var(--app-ligh-text);
+   border: 1px solid var(--app-ligh-text);
+   color: var(--app-lessdark-bg);
+   font-size: 22px;
+   border-radius: 5px;
+   padding: 16px;
+   margin-bottom: 16px;
+   width: 80%;
+   margin: 16px auto;
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   gap: 16px;
+}
+
+.post p {
+   text-align: left;
+   color: var(--app-lessdark-bg);
+   font-size: 22px;
+}
+
+.post-text {
+   color: var(--app-lessdark-bg);
+   font-size: 22px;
+}
+
+.post-header {
+   color: var(--app-lessdark-bg);
+   display: flex;
+   justify-content: flex-start;
+   align-items: left;
+   gap: 16px;
+}
+
+.post-header-image {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-image: url("../img/photo.jpeg");
+   background-size: cover;
+}
+
+.post-header-options {
+   color: var(--app-lessdark-bg);
+   margin-left: auto;
+   margin-right: 16px;
+}
+
+.post-body-image {
+   width: 100%;
+   object-fit: cover;
+}
+
+.post-body-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 5px;
+}
+
+.visible {
+   visibility: visible;
+}
+
+.user {
+   font-weight: 700;
+   font-size: 26px;
+}
+
+.date {
+   color: var(--app-lessdark-bg);
+   font-size: 26px;
+}
+
+/*------------------------------------------------------------*/
+/*                             Modal                          */
+/*------------------------------------------------------------*/
+
+.modal {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: transparent;
+   backdrop-filter: blur(20px);
+   transition: all 0.5s ease;
+   z-index: 1;
+}
+
+h3 {
+   font-size: 26px;
+   color: var(--app-blue);
+}
+
+.modal-content {
+   background-color: var(--app-lessdark-bg);
+   color: var(--app-lessdark-bg);
+   margin: 20% auto;
+   padding: 20px;
+   border-radius: 6px;
+   width: 60%;
+}
+
+.close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
